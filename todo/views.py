@@ -31,3 +31,6 @@ def loginn(request):
         else:
             return redirect('/login')
     return render(request, "login.html")
+
+def todo(request):
+    return render(request, 'todo.html')
