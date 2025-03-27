@@ -18,7 +18,7 @@ def signup(request):
 def loginn(request):
     logged_in_user = request.user
     if logged_in_user.is_authenticated:
-        return render(request, '/todo')
+        return redirect('/todo')
     if request.method == "POST":
         uname = request.POST.get("uname")
         pwd = request.POST.get("pwd")
@@ -33,4 +33,9 @@ def loginn(request):
     return render(request, "login.html")
 
 def todo(request):
+    if request.method == "POST":
+        title = request.POST.get("title")
+        print(title)
+        obj = TODO(title=tile, user = request.user)
+        obj.save()
     return render(request, 'todo.html')
