@@ -36,6 +36,8 @@ def todo(request):
     if request.method == "POST":
         title = request.POST.get("title")
         print(title)
-        obj = TODO(title=tile, user = request.user)
+        obj = TODO(title=title, user = request.user)
         obj.save()
-    return render(request, 'todo.html')
+        return redirect('/todo')
+    items = TODO.objects.filter(user= request.user).order_by("-date")
+    return render(request, 'todo.html', {'items': items})
