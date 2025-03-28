@@ -8,4 +8,5 @@ urlpatterns = [
     path('', views.signup),
     path('login/', views.loginn),
     path('todo/', views.todo),
+    path('edit/<int:serial_no>', views.edit, name="edit"),
 ]

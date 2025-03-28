@@ -44,3 +44,16 @@ def todo(request):
         return redirect('/todo')
     items = TODO.objects.filter(user= request.user).order_by("-date")
     return render(request, 'todo.html', {'items': items})
+
+def edit(request, serial_no):
+    if request.method == "POST":
+        title = request.POST.get('title')
+        obj = TODO.objects.get(serial_no= serial_no)
+        obj.title = title
+        obj.save()
+        return redirect('/todo')
+    item = TODO.objects.get(serial_no = serial_no)
+    items = TODO.objects.filter(user=request.user).order_by("-date")
+    context = {'item': item, 'items':items}
+    
+    return render(request, 'edit.html', context)

@@ -25,13 +25,10 @@
     <div class="container p-5">
         <div class="card border shadow-lg bg-secondary text-white">
             <div class="card-header border-bottom text-center">
-                <h1 class="text-center">Hello {{ request.user }}</h1>
                 <h2 class="text-center card-title">
-                    Get Things Done
+                    Edit Task
                 </h2>
-                <a href="" class="logout">
-                <i class="bi bi-box-arrow-right"></i>
-                </a>
+                
             </div>
             <div class="card-body">
                 <!-- Form container -->
@@ -39,8 +36,8 @@
                     <form class="form-control bg-light" action="" method="post">
                         {% csrf_token %}
                         <div class="d-flex">
-                            <input type="text" class="form-control bg-light" name="title" placeholder="Add Today's Task">
-                            <input type="submit" class="btn-sm ms-2" value="Add Task">
+                            <input type="text" class="form-control bg-light text-dark" name="title" value="{{item.title}}">
+                            <input type="submit" class="btn-sm ms-2" value="Update Task">
                         </div>
                     </form>
                 </div>
