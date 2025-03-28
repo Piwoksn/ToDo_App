@@ -1,0 +1,107 @@
+/* Body and general fonts */
+body {
+  background-color: #343a40;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+/* Card styling */
+.card {
+  background-color: #495057;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-header {
+  background-color: #6c757d;
+  color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Form Control */
+.form-control {
+  background-color: #495057;
+  border-color: #6c757d;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-control:focus {
+  background-color: #6c757d;
+  border-color: #f1c40f;
+  box-shadow: 0 0 0 0.2rem rgba(243, 156, 18, 0.5);
+}
+
+/* Button Styling */
+.btn-sm {
+  background-color: #f1c40f;
+  color: #343a40;
+  border: none;
+  font-weight: 500;
+}
+
+.btn-sm:hover {
+  background-color: #e67e22;
+  color: white;
+}
+
+/* To-Do items styling */
+.Todo {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #e67e22;
+  color: white;
+  position: relative;
+  font-weight: 500;
+}
+
+.Todo h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.Todo p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.Todo div {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.Todo i {
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: 10px;
+  color: white;
+}
+
+.Todo .edit i:hover {
+  color: #01ffff;
+}
+
+.Todo .delete i:hover {
+  color: #ff0404;
+}
+
+/* Card body with scrollable list */
+.scrollable-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.form-container {
+  margin-bottom: 20px;
+}

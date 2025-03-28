@@ -6,6 +6,9 @@ from django.http import HttpResponse
 
 
 def signup(request):
+    logged_in_user = request.user
+    if logged_in_user.is_authenticated:
+        return redirect('/todo')
     if request.method == "POST":
         uname = request.POST["uname"]
         email = request.POST["email"]
@@ -27,7 +30,7 @@ def loginn(request):
         user = authenticate(request, username = uname, password = pwd)
         if user is not None:
             login(request, user)
-            return redirect('/todo.html')
+            return redirect('/todo')
         else:
             return redirect('/login')
     return render(request, "login.html")
