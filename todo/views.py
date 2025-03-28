@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from .models import TODO
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 
 def signup(request):
@@ -35,6 +36,7 @@ def loginn(request):
             return redirect('/login')
     return render(request, "login.html")
 
+@login_required(login_url='/login')
 def todo(request):
     if request.method == "POST":
         title = request.POST.get("title")
@@ -45,6 +47,7 @@ def todo(request):
     items = TODO.objects.filter(user= request.user).order_by("-date")
     return render(request, 'todo.html', {'items': items})
 
+@login_required(login_url='/login')
 def edit(request, serial_no):
     if request.method == "POST":
         title = request.POST.get('title')
@@ -58,6 +61,7 @@ def edit(request, serial_no):
     
     return render(request, 'edit.html', context)
 
+@login_required(login_url='/login')
 def delete(request, serial_no):
     item = TODO.objects.get(serial_no=serial_no)
     item.delete()
