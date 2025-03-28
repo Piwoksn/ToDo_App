@@ -61,6 +61,10 @@
                         </div>
                     </div>
                     {% endfor %}
+                    {% comment %} when todo list is empty {% endcomment %}
+                    {% if not items %}
+                    <p class="display-5 text-center">empty !</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
