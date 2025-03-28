@@ -96,6 +96,14 @@ body {
   color: #ff0404;
 }
 
+.logout i {
+  color: #ff0404;
+}
+
+.logout i:hover {
+  color: #fa7272;
+}
+
 /* Card body with scrollable list */
 .scrollable-list {
   max-height: 400px;
