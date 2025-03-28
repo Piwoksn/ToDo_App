@@ -57,3 +57,12 @@ def edit(request, serial_no):
     context = {'item': item, 'items':items}
     
     return render(request, 'edit.html', context)
+
+def delete(request, serial_no):
+    item = TODO.objects.get(serial_no=serial_no)
+    item.delete()
+    return redirect('/todo')
+
+def logoutt(request):
+    logout(request)
+    return redirect('/')

@@ -52,7 +52,7 @@
                             <a href="/edit/{{item.serial_no}}" class="edit">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
-                            <a href="" class="delete">
+                            <a href="{% url 'delete' serial_no=item.serial_no %}" class="delete">
                                 <i class="bi bi-trash"></i>
                             </a>
                         </div>
