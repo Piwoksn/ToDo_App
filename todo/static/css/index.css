@@ -5,8 +5,8 @@ body {
 
 .signup-login {
   background-color: #0f1f37;
-  /* width: 100%; */
-  /* height: 1080px; */
+  width: 100%;
+  height: 1080px;
   overflow: hidden;
   font-size: 24px;
   color: #fff;
@@ -25,9 +25,6 @@ body {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.signup-box1 {
-  background-color: #ffffff30;
-}
 .heading {
   font-size: 40px;
   font-weight: 600;
