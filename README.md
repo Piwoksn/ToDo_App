@@ -11,4 +11,6 @@ Simple Todo App with user authentication, fully built on django
 
 ## open for UI improvement
 
+focused mainly on the backend. open for frontend improvement
+
 Enjoy!
